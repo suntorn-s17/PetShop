@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace PetShop
 {
-    public partial class Login : Form
+    public partial class form_main : Form
     {
-        public Login()
+        string _username;
+        public form_main(string username)
         {
             InitializeComponent();
+            _username = username;
+        }
+
+        private void form_main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
